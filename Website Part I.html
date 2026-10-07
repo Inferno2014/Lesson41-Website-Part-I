@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            background-color: darkseagreen;
+            font-size: 15px;
+        }
+
+        span {
+            background-color: blue;
+            font-size: 35px;
+        }
+
+        a {
+            color: limegreen
+        }
+
+        p {
+            color: peachpuff;
+        }
+
+        h3,
+        h4 {
+            color: brown;
+        }
+
+        div {
+            background-color: goldenrod;
+            border-radius: 20px;
+        }
+
+        .slider,
+        .slider2,
+        .slider3 {
+            height: 250px;
+            width: 320px;
+        }
+    </style>
+</head>
+
+<body>
+    <span> <a href="#about-us">About Us</a><br> <a href="#appetizers">Try our Delicious Appetizers😃</a><br> <a
+            href="#main-course">Try our Main
+            Course😃😃</a><br> <a href="#dessert">Yummy Dessert😃😃</a></span>
+    <br><br>
+    <h1>About us</h1>
+
+    <div id="appetizers">
+        <card>
+            <card-body>
+                <h3>Appetizers</h3>
+                <h4>1. Soup</h4>
+                <p>Try our delicious soups with options varying from Cream of Tomato to Vegetable soup or even the
+                    Chef's Special Cheeesy soup, it is a must-have!</p>
+                <h4>2. French Fries</h4>
+                <p>Try our Classic French Fries with a pich of salt and baked to perfection, Our Peri-Peri French Fries
+                    with it's iconic and flavorful masala and finally, The Chef's Special Fries, with extra cheese and a
+                    special dip, it is a favourite for everyone!</p>
+            </card-body>
+        </card>
+    </div>
+    <section>
+        <img class="slider" src="appetizers.webp">
+        <img class="slider" src="Creamy-Tomato-Soup.jpg">
+        <img class="slider" src="Vegetable-soup.jpg">
+        <img class="slider" src="french-fries.jpg">
+        <img class="slider" src="peri peri french fries.jpg">
+    </section>
+    <br><br><br><br><br><br><br><br><br>
+    <div id="main-course">
+        <card>
+            <card-body>
+                <h3>The Main Course</h3>
+                <h4>1. Pizza</h4>
+                <p>Try our mouth-watering pizza, Our margherita is as cheesy as cheese would be, Our Veg Pizza is cooked
+                    with roasted, delicious veggies which our kids love, and finally, The chef's special Pizza, with
+                    extra cheese, fries on the side, a pizza dip and will be made right in the oven in front of you!</p>
+                <h4>2. Burger</h4>
+                <p>Our golden-brown burgers is the reason out restaurant is a hotspot around here! The Veg Burger
+                    contains the perfect buns, roasted veggies, with a tasty patty along with ketchup, the Paneer
+                    Overload Burger is a must-have here! It contains a lot of paneer along with veggies and a patty, and
+                    finally, the Chef's Special Biggie Burger, which has more filling, a special sauce, a pizza-like
+                    filling along with a gift!</p>
+
+            </card-body>
+        </card>
+    </div>
+    <section>
+        <img class="slider2" src="main course.avif">
+        <img class="slider2" src="pizza454.webp">
+        <img class="slider2" src="veg pizzaa.jpg">
+        <img class="slider2" src="burrgggeer.webp">
+        <img class="slider2" src="paneer overload burger.webp">
+    </section>
+    <br><br><br><br><br><br><br><br><br>
+    <div id="dessert">
+        <card>
+            <card-body>
+                <h3>Dessert</h3>
+                <h4>1. Ice-cream</h4>
+                <p>Try our ice-creams, like our Choco-Vanilla flavour, or The Mixed Fruit Tango flavour, and the Chef's
+                    special All-in-1 Ice cream flavour, which has 1 scoop of each flavour and comes with a challenge, if
+                    you can finish it within 30 minutes, whatever you buy that day is free for you! So come on here and
+                    try our challenge.</p>
+                <h4>2. Cake</h4>
+                <p>Our cakes vary from Chocolate to Vanilla, Butterscotch and Black Currant, Choco-lava with Vanilla
+                    Filling, And the Chef's Special Dragon Sculpture Cake! It is sculpted to look like a dragon and is
+                    enormous!</p>
+            </card-body>
+        </card>
+        <section>
+            <img class="slider3" src="Screenshot_7-10-2026_141055_www.bing.com.jpeg">
+            <img class="slider3" src="ice cream 1.jpg">
+            <img class="slider3" src="ice cream 2.avif">
+            <img class="slider3" src="ice cream 3.jpg">
+            <img class="slider3" src="Lava-Cake-2.jpg">
+            <img class="slider3" src="cake.jpg">
+        </section>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <div id="about-us">
+        <h3>About Us </h3>
+        <p>The Richmond Hotel has won the Best Restaurant of The Year for 2 years going. Our CEO, Adhitya Raman is
+            currently working on newer, tastier recipes and will make your mouths water!</p>
+    </div>
+    <script>
+        let myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            let x = document.getElementsByClassName("slider");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+        carousel2();
+        function carousel2() {
+            var i;
+            let x = document.getElementsByClassName("slider2");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel2, 3000);
+        }
+        carousel3();
+        function carousel3() {
+            var i;
+            let x = document.getElementsByClassName("slider3");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1;
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel3, 3000);
+        }
+    </script>
+</body>
+
+</html>
